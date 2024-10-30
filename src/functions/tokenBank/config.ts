@@ -6,6 +6,8 @@ export const config = createConfig({
   transports: {
     [mainnet.id]: http("https://eth.llamarpc.com"),
     [sepolia.id]: http("https://sepolia.infura.io/v3/"),
-    [anvil.id]: http("http://localhost:8545"), // new
+    [anvil.id]: http("http://localhost:8545",{
+      retryCount: 5
+    }), // new
   },
 })

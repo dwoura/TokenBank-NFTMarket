@@ -10,7 +10,7 @@ import WagmiIcon from '~icons/fisand-icons/wagmi-icon'
 import approvePermit2 from '@/functions/tokenBank/_approvePermit2'
 import DoSignTypedData from '@/functions/tokenBank/_sign';
 
-import {TokenPermissions, PermitTransferFromType, SigTransferDetailsType, DepositData} from "@/functions/tokenBank/type";
+import { DepositData} from "@/functions/tokenBank/type";
 import DepositWithPermit2 from "@/functions/tokenBank/_deposit";
 
 function Home() {
@@ -140,7 +140,7 @@ function Home() {
                 <div className="flex flex-col gap-4">
                     <span></span>
 
-                      {depositData && <DepositWithPermit2 depositData={depositData} />}
+                      <DepositWithPermit2 depositData={depositData} />
 
                     <span></span>
                 </div>
